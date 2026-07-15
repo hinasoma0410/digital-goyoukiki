@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hinasoma0410.github.io/digital-goyoukiki/sitemap.xml
