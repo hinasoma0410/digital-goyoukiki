@@ -50,26 +50,22 @@
 
 <script>
 (() => {
-  const nativeScrollTo = window.scrollTo.bind(window);
-  let keepPosition = false;
-  let savedX = 0;
-  let savedY = 0;
+  const optionSelector = '[data-pain], [data-answer], [data-future]';
 
-  document.addEventListener('pointerdown', (event) => {
-    if (!event.target.closest('[data-pain], [data-answer], [data-future]')) return;
-    keepPosition = true;
-    savedX = window.scrollX;
-    savedY = window.scrollY;
+  document.addEventListener('click', (event) => {
+    const option = event.target.closest(optionSelector);
+    if (!option) return;
+
+    const savedX = window.scrollX;
+    const savedY = window.scrollY;
+
+    const restore = () => window.scrollTo({ left: savedX, top: savedY, behavior: 'auto' });
+    requestAnimationFrame(() => {
+      restore();
+      requestAnimationFrame(restore);
+    });
+    setTimeout(restore, 60);
   }, true);
-
-  window.scrollTo = (...args) => {
-    if (keepPosition) {
-      keepPosition = false;
-      requestAnimationFrame(() => nativeScrollTo(savedX, savedY));
-      return;
-    }
-    nativeScrollTo(...args);
-  };
 })();
 </script>
 <script src="app.js"></script>
