@@ -48,6 +48,30 @@
 </div>
 <div class="toast" id="toast"></div>
 
+<script>
+(() => {
+  const nativeScrollTo = window.scrollTo.bind(window);
+  let keepPosition = false;
+  let savedX = 0;
+  let savedY = 0;
+
+  document.addEventListener('pointerdown', (event) => {
+    if (!event.target.closest('[data-pain], [data-answer], [data-future]')) return;
+    keepPosition = true;
+    savedX = window.scrollX;
+    savedY = window.scrollY;
+  }, true);
+
+  window.scrollTo = (...args) => {
+    if (keepPosition) {
+      keepPosition = false;
+      requestAnimationFrame(() => nativeScrollTo(savedX, savedY));
+      return;
+    }
+    nativeScrollTo(...args);
+  };
+})();
+</script>
 <script src="app.js"></script>
 </body>
 </html>
