@@ -14,5 +14,17 @@
 <div class="top"><div><h1 id="pageTitle">仕事を少しラクにする方法を探します</h1><p id="pageSub">営業担当がお客様と一緒に使う診断版です。</p></div><div class="minor no-print"><button class="btn text" id="restartBtn">最初からやり直す</button></div></div>
 <section id="welcome" class="view active"></section><section id="pain" class="view"></section><section id="question" class="view"></section><section id="thinking" class="view"></section><section id="result" class="view"></section><section id="future" class="view"></section><section id="contact" class="view"></section><section id="sales" class="view"></section><section id="settings" class="view"></section><section id="report" class="view"></section>
 </main></div><div class="toast" id="toast"></div>
+<script>
+(()=>{
+ const nav=performance.getEntriesByType('navigation')[0];
+ if(!nav || nav.type!=='reload'){
+  try{
+   const old=JSON.parse(localStorage.getItem('workEasyFaceV4')||'{}');
+   const keep={contact:old.contact||undefined};
+   localStorage.setItem('workEasyFaceV4',JSON.stringify(keep));
+  }catch(e){localStorage.removeItem('workEasyFaceV4')}
+ }
+})();
+</script>
 <script src="../app-v4-1.js"></script><script src="../app-v4-2.js"></script><script src="../app-v4-3.js"></script><script src="../app-v4-4.js"></script>
 </body></html>
