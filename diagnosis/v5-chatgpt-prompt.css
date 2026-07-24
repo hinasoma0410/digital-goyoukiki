@@ -1,0 +1,8 @@
+.chatgpt-prompt-card{margin-top:16px;border:2px solid #3155d9;background:linear-gradient(135deg,#fff,#f7f9ff)}
+.chatgpt-prompt-card .head{align-items:center}
+.chatgpt-prompt-card h3{margin:8px 0 4px;font-size:17px}
+.chatgpt-prompt-card details{margin-top:14px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.chatgpt-prompt-card summary{padding:14px;font-size:10px;font-weight:900;cursor:pointer;background:#f8fafc}
+#chatgptPromptText{display:block;width:100%;min-height:520px;border:0;border-top:1px solid var(--line);padding:15px;resize:vertical;background:#111827;color:#e8eefc;font-size:9px;line-height:1.75;white-space:pre-wrap}
+.chatgpt-prompt-card .notice{margin-top:14px}
+@media(max-width:650px){.chatgpt-prompt-card .head{display:block}.chatgpt-prompt-card .head .btn{width:100%;margin-top:12px}#chatgptPromptText{min-height:420px}}
