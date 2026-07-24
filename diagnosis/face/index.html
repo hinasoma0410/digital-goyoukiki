@@ -1,30 +1,3 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>仕事ラクラク診断｜対面営業版</title>
-<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../v4-extra.css">
-</head>
-<body data-mode="face">
-<div class="shell"><aside class="sidebar">
-<div class="brand"><div class="brandmark">DX</div><div><b>デジタル御用聞き</b><span>仕事ラクラク診断｜対面営業版</span></div></div>
-<nav><button class="active" data-view="welcome">01 はじめる</button><button data-view="pain">02 候補を選ぶ</button><button data-view="question">03 比較して診断</button><button data-view="result">04 診断結果</button><button data-view="future">05 未来を選ぶ</button><button data-view="contact">06 無料相談</button><button data-view="sales">07 営業メモ</button><button data-view="settings">08 連絡先設定</button><button data-view="report">09 診断書</button></nav>
-<div class="side-card"><b>進み具合</b><p>お客様と話しながら、優先順位・具体的な提案・診断書まで作成できます。</p><div class="progress"><span id="progressBar" style="width:0%"></span></div><p id="progressText">0%</p></div>
-</aside><main class="main">
-<div class="top"><div><h1 id="pageTitle">仕事を少しラクにする方法を探します</h1><p id="pageSub">営業担当がお客様と一緒に使う診断版です。</p></div><div class="minor no-print"><button class="btn text" id="restartBtn">最初からやり直す</button></div></div>
-<section id="welcome" class="view active"></section><section id="pain" class="view"></section><section id="question" class="view"></section><section id="thinking" class="view"></section><section id="result" class="view"></section><section id="future" class="view"></section><section id="contact" class="view"></section><section id="sales" class="view"></section><section id="settings" class="view"></section><section id="report" class="view"></section>
-</main></div><div class="toast" id="toast"></div>
-<script>
-(()=>{
- const nav=performance.getEntriesByType('navigation')[0];
- if(!nav || nav.type!=='reload'){
-  try{
-   const old=JSON.parse(localStorage.getItem('workEasyFaceV4')||'{}');
-   const keep={contact:old.contact||undefined};
-   localStorage.setItem('workEasyFaceV4',JSON.stringify(keep));
-  }catch(e){localStorage.removeItem('workEasyFaceV4')}
- }
-})();
-</script>
-<script src="../app-v4-1.js"></script><script src="../app-v4-2.js"></script><script src="../app-v4-3.js"></script><script src="../app-v4-4.js"></script>
-</body></html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小さな会社の仕事詰まり診断｜対面営業版</title><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../v5-extra.css"></head>
+<body data-mode="face"><div class="shell"><aside class="sidebar"><div class="brand"><div class="brandmark">DX</div><div><b>デジタル御用聞き</b><span>小さな会社の仕事詰まり診断｜対面営業版</span></div></div><nav><button class="active" data-view="welcome">01 はじめる</button><button data-view="symptoms">02 起きていること</button><button data-view="questions">03 会社の状態</button><button data-view="result">04 診断結果</button><button data-view="future">05 改善後の目的</button><button data-view="contact">06 無料相談</button><button data-view="sales">07 営業メモ</button><button data-view="settings">08 連絡先設定</button><button data-view="report">09 診断書</button></nav><div class="side-card"><b>進み具合</b><p>お客様と一緒に、隠れた原因・具体的な改善案・90日ロードマップまで作成します。</p><div class="progress"><span id="progressBar" style="width:0%"></span></div><p id="progressText">0%</p></div></aside><main class="main"><div class="top"><div><h1 id="pageTitle">小さな会社の「仕事詰まり」を見つけます</h1><p id="pageSub">営業担当がお客様と一緒に使う経営者向け診断版です。</p></div><div class="minor no-print"><button class="btn text" id="restartBtn">新しい会社を診断する</button></div></div><section id="welcome" class="view active"></section><section id="symptoms" class="view"></section><section id="questions" class="view"></section><section id="thinking" class="view"></section><section id="result" class="view"></section><section id="future" class="view"></section><section id="contact" class="view"></section><section id="sales" class="view"></section><section id="settings" class="view"></section><section id="report" class="view"></section></main></div><div class="toast" id="toast"></div><script src="../app-v5-1.js"></script><script src="../app-v5-2.js"></script><script src="../app-v5-3.js"></script><script src="../app-v5-4.js"></script></body></html>
